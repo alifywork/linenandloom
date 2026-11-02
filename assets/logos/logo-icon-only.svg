@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="logo-title">
+  <title id="logo-title">LINEN & LOOM — loom motif</title>
+  <rect width="48" height="48" fill="#F7F4F0"/><g fill="none" stroke="#2E2A26" stroke-width="1.90" stroke-linecap="square">
+    <path d="M 14 9 V 41" />
+    <path d="M 24 9 V 41" />
+    <path d="M 34 9 V 41" />
+    <path d="M 9 25 H 39" />
+  </g>
+</svg>

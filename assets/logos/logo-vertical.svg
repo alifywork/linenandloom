@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" role="img" aria-labelledby="logo-title">
+  <title id="logo-title">LINEN & LOOM — vertical wordmark with loom motif</title>
+  <g fill="none" stroke="#2E2A26" stroke-width="1.78" stroke-linecap="square">
+    <path d="M 150.3 10.1 V 43.7" />
+    <path d="M 160.8 10.1 V 43.7" />
+    <path d="M 171.3 10.1 V 43.7" />
+    <path d="M 145.05 26.900000000000002 H 176.55" />
+  </g><text x="160" y="92" text-anchor="middle" fill="#2E2A26" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="400" letter-spacing="3.2">LINEN <tspan fill="#8C3A3A">&amp;</tspan> LOOM</text>
+</svg>
