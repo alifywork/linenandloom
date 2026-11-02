@@ -5,6 +5,7 @@ The SVGs are hand-authored line art (no tracing, no stock icon). PNG favicons ar
 rendered locally with Pillow so the site has no external icon/font dependency.
 """
 from pathlib import Path
+import html
 from PIL import Image, ImageDraw
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -39,7 +40,7 @@ def wordmark(x, y, color, amp=MAROON, size=25, tracking=3.6, anchor="start"):
 
 def svg(view, body, title):
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="{view}" role="img" aria-labelledby="logo-title">
-  <title id="logo-title">{title}</title>
+  <title id="logo-title">{html.escape(title, quote=False)}</title>
   {body}
 </svg>
 '''

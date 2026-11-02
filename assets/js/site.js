@@ -1114,15 +1114,23 @@
     if (!motionOK) return;
     if (hasScrollTrigger) {
       window.gsap.utils.toArray('.reveal').forEach(function (el) {
-        window.gsap.from(el, { opacity: 0, y: 24, duration: .8, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
+        window.gsap.fromTo(el, { opacity: 0, y: 24 }, {
+          opacity: 1, y: 0, duration: .8, ease: 'power2.out', immediateRender: false,
+          scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+        });
       });
       document.querySelectorAll('[data-stagger]').forEach(function (group) {
         const children = Array.prototype.slice.call(group.children);
         if (!children.length) return;
-        window.gsap.from(children, { opacity: 0, y: 22, stagger: .08, duration: .7, ease: 'power2.out', scrollTrigger: { trigger: group, start: 'top 86%', once: true } });
+        window.gsap.fromTo(children, { opacity: 0, y: 22 }, {
+          opacity: 1, y: 0, stagger: .08, duration: .7, ease: 'power2.out', immediateRender: false,
+          scrollTrigger: { trigger: group, start: 'top 86%', once: true }
+        });
       });
     } else {
-      window.gsap.from('.reveal', { opacity: 0, y: 20, duration: .7, stagger: .06, ease: 'power2.out' });
+      window.gsap.fromTo('.reveal', { opacity: 0, y: 20 }, {
+        opacity: 1, y: 0, duration: .7, stagger: .06, ease: 'power2.out', immediateRender: false
+      });
     }
   };
 
@@ -1158,6 +1166,9 @@
     LL.refreshWishlistButtons();
     LL.initCarousels();
     LL.initGlobalAnimations();
+    if (hasScrollTrigger) {
+      window.addEventListener('load', function () { window.ScrollTrigger.refresh(); }, { once: true });
+    }
 
     const sizeModal = document.getElementById('sizeChartModal');
     if (sizeModal) {

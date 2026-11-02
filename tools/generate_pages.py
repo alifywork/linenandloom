@@ -437,8 +437,8 @@ def shop():
         '<li><label><input type="checkbox" data-filter-size value="%s"><span>UK %s</span></label></li>' % (s, s)
         for s in ['6', '8', '10', '12', '14', '16', '18']
     )
-    colors = ['Oat', 'Espresso', 'Chalk', 'Champagne', 'Mushroom', 'Sage', 'Maroon', 'Flax', 'Porcelain', 'Pearl', 'Taupe']
-    hexes = {'Oat': '#D8C7B2', 'Espresso': '#2E2A26', 'Chalk': '#EDE8E1', 'Champagne': '#E3CBB7', 'Mushroom': '#A79A8D', 'Sage': '#A7B3A0', 'Maroon': '#8C3A3A', 'Flax': '#C9B79F', 'Porcelain': '#F5F2ED', 'Pearl': '#EDE8E1', 'Taupe': '#B7A28B'}
+    colors = ['Oat', 'Espresso', 'Chalk', 'Champagne', 'Mushroom', 'Maroon', 'Flax', 'Porcelain', 'Pearl', 'Taupe']
+    hexes = {'Oat': '#D8C7B2', 'Espresso': '#2E2A26', 'Chalk': '#EDE8E1', 'Champagne': '#E3CBB7', 'Mushroom': '#A79A8D', 'Maroon': '#8C3A3A', 'Flax': '#C9B79F', 'Porcelain': '#F5F2ED', 'Pearl': '#EDE8E1', 'Taupe': '#B7A28B'}
     color_buttons = ''.join('<button class="filter-color" type="button" data-filter-color="%s" aria-label="Filter by %s" title="%s"><span style="background:%s"></span></button>' % (c, c, c, hexes[c]) for c in colors)
     return page_hero('The full edit', 'Shop all pieces', 'Considered womenswear, cloth by the metre and accessories. Filter by category, UK size, colour or price.', [('Home', 'index.html'), ('Shop', None)]) + '''
 <section class="inner-section">

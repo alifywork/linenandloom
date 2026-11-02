@@ -28,13 +28,9 @@
         });
       }
 
-      /* Fabric swatch rail: draggable on desktop, native touch scroll preserved. */
-      const swatches = document.querySelector('.swatch-strip');
-      if (swatches && LL.Draggable) {
-        try {
-          LL.Draggable.create(swatches, { type: 'scrollLeft', edgeResistance: .8, allowNativeTouchScrolling: true, cursor: 'grab', activeCursor: 'grabbing' });
-        } catch (err) { /* native overflow scroll is the fallback */ }
-      }
+      /* The swatch rail uses native horizontal overflow scrolling. Applying
+         Draggable's scrollLeft wrapper here would collapse its flex children
+         into one enormous vertical stack, so it is deliberately left native. */
 
       /* Pinned horizontal lookbook on desktop. */
       const pin = document.querySelector('.lookbook-pin');
