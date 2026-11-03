@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2E2A26">
+  <meta name="description" content="Track a LINEN & LOOM order with a Royal Mail status timeline.">
+  <title>Track Order | LINEN & LOOM</title>
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/icons/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/icons/favicon-512x512.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" href="assets/fonts/marcellus-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jost-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/vendor/phosphor/regular/style.css">
+  <link rel="stylesheet" href="assets/vendor/phosphor/bold/style.css">
+  <link rel="stylesheet" href="assets/vendor/phosphor/fill/style.css">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-page="track-order">
+  <a class="visually-hidden visually-hidden-focusable position-absolute top-0 start-0 p-3 bg-white" href="#main-content">Skip to content</a>
+  <div id="site-header"></div>
+  <noscript><div class="container py-3 small-copy">This storefront uses JavaScript for the bag, wishlist, quick view and cookie preferences. Product pages and editorial content remain readable.</div></noscript>
+  <main id="main-content">
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb-editorial" aria-label="Breadcrumb"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span data-breadcrumb-current>Track Order</span></nav>
+    <span class="eyebrow ">Help</span>
+    <h1>Track your order</h1>
+    <p class="lede">Enter the order number from your confirmation email and the email address used at checkout.</p>
+  </div>
+</section>
+<section class="inner-section">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-5 reveal">
+        <div class="contact-card">
+          <span class="eyebrow ">Royal Mail tracked</span>
+          <h2>Order lookup</h2>
+          <form data-track-form>
+            <div style="margin-bottom:16px"><label class="form-label" for="orderNo">Order number</label><input class="form-control" id="orderNo" name="order" placeholder="LL-123456" required></div>
+            <div style="margin-bottom:20px"><label class="form-label" for="trackEmail">Email address</label><input class="form-control" id="trackEmail" name="email" type="email" required></div>
+            <button class="btn-editorial w-100" type="submit">Track order <i class="ph ph-arrow-right"></i></button>
+          </form>
+          <p class="small-copy" style="margin-top:16px"><i class="fa-solid fa-lock"></i> Demonstration lookup only — no data is sent anywhere.</p>
+        </div>
+      </div>
+      <div class="col-lg-7 reveal">
+        <div class="empty-state" style="border-style:solid"><i class="fa-solid fa-truck-fast"></i><h3>Your parcel, step by step</h3><p>Enter an order number to see a sample Royal Mail timeline.</p></div>
+        <div class="form-success" data-track-result hidden style="margin-top:20px">
+          <span class="eyebrow">Demo tracking</span><h2>Order <span data-track-order>LL-000000</span></h2><p class="small-copy">Status for <span data-track-email>you@example.com</span> · Royal Mail Tracked 48</p>
+          <div class="track-timeline">
+            <div class="track-step is-done"><strong>Order placed</strong><p>Received at the Shoreditch atelier.</p></div>
+            <div class="track-step is-done"><strong>Picked & wrapped</strong><p>Checked against the original sample and packed in a linen dust bag.</p></div>
+            <div class="track-step is-done"><strong>With Royal Mail</strong><p>Tracked 48 · estimated delivery in 2 working days.</p></div>
+            <div class="track-step"><strong>Out for delivery</strong><p>We will email tracking updates as the parcel moves.</p></div>
+            <div class="track-step"><strong>Delivered</strong><p>Free 28-day UK returns begin on delivery.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+  <div id="site-footer"></div>
+  <div id="site-overlays"></div>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/gsap/gsap.min.js"></script>
+  <script src="assets/vendor/gsap/Draggable.min.js"></script>
+  <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/page.js"></script>
+</body>
+</html>

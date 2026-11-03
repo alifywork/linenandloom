@@ -1,0 +1,11 @@
+# Scratch / build artefacts
+image-search/
+__pycache__/
+*.pyc
+.DS_Store
+node_modules/
+.venv/
+dist/
+build/
+coverage/
+*.log

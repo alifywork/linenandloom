@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2E2A26">
+  <meta name="description" content="Two-column checkout with Klarna Pay in 3, VAT included and secure payment options.">
+  <title>Checkout | LINEN & LOOM</title>
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/icons/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/icons/favicon-512x512.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" href="assets/fonts/marcellus-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jost-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/vendor/phosphor/regular/style.css">
+  <link rel="stylesheet" href="assets/vendor/phosphor/bold/style.css">
+  <link rel="stylesheet" href="assets/vendor/phosphor/fill/style.css">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-page="checkout">
+  <a class="visually-hidden visually-hidden-focusable position-absolute top-0 start-0 p-3 bg-white" href="#main-content">Skip to content</a>
+  <div id="site-header"></div>
+  <noscript><div class="container py-3 small-copy">This storefront uses JavaScript for the bag, wishlist, quick view and cookie preferences. Product pages and editorial content remain readable.</div></noscript>
+  <main id="main-content">
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb-editorial" aria-label="Breadcrumb"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><a href="cart.html">Bag</a><i class="fa-solid fa-chevron-right"></i><span data-breadcrumb-current>Checkout</span></nav>
+    <span class="eyebrow ">Almost yours</span>
+    <h1>Checkout</h1>
+    <p class="lede">A calm, two-column checkout with a sticky order summary, VAT included and Klarna 3-split.</p>
+  </div>
+</section>
+<section class="inner-section">
+  <div class="container checkout-layout">
+    <div>
+      <div class="form-alert" data-checkout-empty style="display:none">Your bag is empty. <a class="text-link" href="shop.html">Add a piece</a> before placing an order.</div>
+      <div class="form-success" data-checkout-success hidden><span class="eyebrow">Order received</span><h2>Thank you.</h2><p>Your demonstration order <strong data-order-number>LL-000000</strong> has been placed. No payment was taken and no data left your browser.</p><a class="text-link" href="shop.html">Continue shopping <i class="ph ph-arrow-up-right"></i></a></div>
+      <form data-checkout-form>
+        <section class="checkout-form-section"><h2><span>1</span> Contact</h2><div class="row g-3"><div class="col-md-6"><label class="form-label" for="firstName">First name</label><input class="form-control" id="firstName" name="firstName" required></div><div class="col-md-6"><label class="form-label" for="lastName">Last name</label><input class="form-control" id="lastName" name="lastName" required></div><div class="col-md-7"><label class="form-label" for="email">Email</label><input class="form-control" id="email" type="email" name="email" required></div><div class="col-md-5"><label class="form-label" for="phone">Phone</label><input class="form-control" id="phone" type="tel" name="phone" placeholder="+44"></div></div></section>
+        <section class="checkout-form-section"><h2><span>2</span> Delivery address</h2><div class="row g-3"><div class="col-12"><label class="form-label" for="address">Address</label><input class="form-control" id="address" name="address" required></div><div class="col-md-5"><label class="form-label" for="city">City</label><input class="form-control" id="city" name="city" required></div><div class="col-md-4"><label class="form-label" for="postcode">Postcode</label><input class="form-control" id="postcode" name="postcode" required></div><div class="col-md-3"><label class="form-label" for="country">Country</label><select class="form-select" id="country" name="country"><option>United Kingdom</option><option>Ireland</option><option>France</option><option>Germany</option><option>Netherlands</option><option>Spain</option><option>Italy</option></select></div></div></section>
+        <section class="checkout-form-section"><h2><span>3</span> Delivery</h2><div class="payment-methods">
+          <label class="payment-method"><input type="radio" name="shipping" value="0" data-shipping checked><div><strong>Royal Mail Tracked 48</strong><small>Free UK delivery over £120 · 2–3 working days</small></div><i class="fa-solid fa-truck-fast payment-method__icons"></i></label>
+          <label class="payment-method"><input type="radio" name="shipping" value="6.95" data-shipping><div><strong>Royal Mail Next Day</strong><small>Order before 14:00 · £6.95</small></div><i class="fa-solid fa-truck-fast payment-method__icons"></i></label>
+          <label class="payment-method"><input type="radio" name="shipping" value="12" data-shipping><div><strong>EU tracked delivery</strong><small>3–6 working days · £12.00 · VAT included</small></div><i class="fa-solid fa-globe payment-method__icons"></i></label>
+        </div></section>
+        <section class="checkout-form-section"><h2><span>4</span> Payment</h2><div class="payment-methods">
+          <label class="payment-method"><input type="radio" name="payment" value="card" checked><div><strong>Card</strong><small>Visa, Mastercard, Amex</small></div><span class="payment-method__icons"><i class="fa-brands fa-cc-visa"></i> <i class="fa-brands fa-cc-mastercard"></i> <i class="fa-brands fa-cc-amex"></i></span></label>
+          <label class="payment-method"><input type="radio" name="payment" value="paypal"><div><strong>PayPal</strong><small>Pay with your PayPal balance</small></div><i class="fa-brands fa-cc-paypal payment-method__icons"></i></label>
+          <label class="payment-method"><input type="radio" name="payment" value="klarna"><div><strong>Klarna · Pay in 3</strong><small>Three interest-free instalments</small></div><span class="klarna-badge">Klarna.</span></label>
+          <label class="payment-method"><input type="radio" name="payment" value="applepay"><div><strong>Apple Pay</strong><small>Fast, secure checkout</small></div><i class="fa-brands fa-apple-pay payment-method__icons"></i></label>
+        </div><p class="small-copy" style="margin-top:16px"><i class="fa-solid fa-lock"></i> This is a front-end demonstration. No payment is processed and no card details are stored.</p></section>
+        <button class="btn-editorial" type="submit">Place order <i class="fa-solid fa-lock"></i></button>
+      </form>
+    </div>
+    <aside class="checkout-summary reveal">
+      <div style="display:flex;justify-content:space-between;align-items:center"><h2>Order summary</h2><span class="small-copy" data-checkout-count>0 items</span></div>
+      <div data-checkout-items></div>
+      <div class="checkout-totals">
+        <div class="checkout-totals__row"><span>Subtotal</span><strong data-checkout-subtotal>£0</strong></div>
+        <div class="checkout-totals__row"><span>Delivery</span><strong data-checkout-shipping>Free</strong></div>
+        <div class="checkout-totals__row"><span>VAT (20%)</span><strong data-checkout-vat>£0 included</strong></div>
+        <div class="checkout-totals__row checkout-totals__row--total"><span>Total</span><strong data-checkout-total>£0</strong></div>
+      </div>
+      <div class="vat-note"><i class="fa-solid fa-circle-info"></i> All displayed prices include UK VAT. EU orders are shipped DDP where applicable; no additional VAT is requested on delivery.</div>
+      <div class="klarna-split"><div class="klarna-split__top"><strong>Klarna. Pay in 3</strong><span class="small-copy" data-klarna-total>£0</span></div><div class="klarna-split__payments"><span>Today<br><strong data-klarna-split>£0</strong></span><span>Month 1<br><strong data-klarna-split>£0</strong></span><span>Month 2<br><strong data-klarna-split>£0</strong></span></div></div>
+      <p class="small-copy" style="margin-top:16px"><i class="fa-solid fa-rotate-left"></i> Free 28-day UK returns · <a href="shipping-returns.html">Full policy</a></p>
+    </aside>
+  </div>
+</section>
+  </main>
+  <div id="site-footer"></div>
+  <div id="site-overlays"></div>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/gsap/gsap.min.js"></script>
+  <script src="assets/vendor/gsap/Draggable.min.js"></script>
+  <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/checkout.js"></script>
+  <script src="assets/js/page.js"></script>
+</body>
+</html>
